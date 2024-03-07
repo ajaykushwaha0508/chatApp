@@ -32,7 +32,7 @@ function Login() {
                     <label className='label p-2'>
                         <span className='text-base label-text'>Password</span>
                     </label>
-                    <input type='text' placeholder='Enter password' className='w-full input input-bordered h-10'
+                    <input type='password' placeholder='Enter password' className='w-full input input-bordered h-10'
                       onChange={(e)=>setInputs({...inputs ,password : e.target.value})}
                       value = {inputs.password}
                     />
