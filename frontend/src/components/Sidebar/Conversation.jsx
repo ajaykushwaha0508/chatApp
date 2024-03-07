@@ -6,8 +6,9 @@ function Conversation({conversation , emoji , lastIdx}) {
     const {selectedConversation , setSelectedConversation} = useConversation();
     const isSelected = selectedConversation?._id === conversation._id;
     const {onlineUsers } = useSocketContext();
-    const isOnline = onlineUsers.includes(conversation._id);
-
+    // const isOnline = onlineUsers.includes(conversation._id);// we use the below property because includes is not suppported by many browsers
+    const isOnline = onlineUsers.indexOf(conversation._id) > -1;
+    
   return (
     <>
     <div className={`flex gap-2 items-center hover:bg-sky-500 rounded p-2 py-1 cursor-pointer
