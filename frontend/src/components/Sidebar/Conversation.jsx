@@ -8,12 +8,22 @@ function Conversation({conversation , emoji , lastIdx}) {
     const {onlineUsers } = useSocketContext();
     // const isOnline = onlineUsers.includes(conversation._id);// we use the below property because includes is not suppported by many browsers
     const isOnline = onlineUsers?.indexOf(conversation._id) > -1;
+
+    const scrollRight=()=>{
+        const cls = document.getElementById("forscrollbar");
+        console.log(cls.scrollTo({
+            top : 0,
+            left : 400,
+            behavior : "smooth"
+        }));
+    }
     
   return (
     <>
     <div className={`flex gap-2 items-center hover:bg-sky-500 rounded p-2 py-1 cursor-pointer
-    ${ isSelected && 'bg-sky-500'}`}
-    onClick={()=>setSelectedConversation(conversation)}
+    ${ isSelected && 'bg-sky-500'}`} 
+    onClick={()=>{setSelectedConversation(conversation) ; scrollRight()} }
+    
     >
     
     <div className={`avatar ${isOnline ? "online" : ''}`}>
