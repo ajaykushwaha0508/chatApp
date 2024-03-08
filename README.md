@@ -7,6 +7,10 @@
 ## Details : 
 This is a MERN stack project. Using this app user can comminucate with friends and other users.
 
+## Features : 
+<li>User friendly UI</li>
+<li>Realtime Communication</li>
+<li>Users online status</li>
 
 ## Technologies & Languages :
  * [X] Soket.io (for realtime communication)
@@ -19,6 +23,4 @@ This is a MERN stack project. Using this app user can comminucate with friends a
 
 
 
-## Features : 
-<li>Realtime Communication</li>
-<li>Users online status</li>
+
